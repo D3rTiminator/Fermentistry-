@@ -1,0 +1,1 @@
+let warenkorb=[];function speichern(){localStorage.setItem('warenkorb',JSON.stringify(warenkorb));}function anzeigenBestellung(){let d=document.getElementById('warenkorbDaten');if(d)d.value=JSON.stringify(warenkorb);}window.onload=anzeigenBestellung;
