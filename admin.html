@@ -1,1 +1,38 @@
-<!DOCTYPE html><html lang='de'><head><meta charset='UTF-8'><title>Admin</title><link rel='stylesheet' href='styles.css'></head><body><main><h2>Letzte Bestellungen</h2><div id='adminView'></div><script>window.onload=function(){let e=document.getElementById('adminView');let d=JSON.parse(localStorage.getItem('bestellungen')||'[]');e.innerHTML=d.length?'<ul>'+d.map(b=>`<li>${b.name}: ${b.warenkorb}</li>`).join('')+'</ul>':'<p>Keine Daten</p>';}</script></main></body></html>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fermentistry</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>Fermentistry</h1>
+  <p>Edler Kombucha aus Franken – natürlich fermentiert</p>
+</header>
+<nav>
+  <a href="index.html">Start</a>
+  <a href="produkte.html">Produkte</a>
+  <a href="bestellen.html">Bestellen</a>
+  <a href="abo.html">Abo</a>
+  <a href="kontakt.html">Kontakt</a>
+</nav>
+<main>
+<section class="hero">
+  <h2>Adminbereich</h2>
+  <p>Letzte Bestellungen (lokal gespeichert)</p>
+  <div id="adminView"></div>
+</section>
+<script>
+window.onload = function() {
+  let el = document.getElementById('adminView');
+  let data = JSON.parse(localStorage.getItem('bestellungen') || '[]');
+  el.innerHTML = data.length ? '<ul>' + data.map(b => `<li>${b.name}: ${b.warenkorb}</li>`).join('') + '</ul>' : '<p>Keine Bestellungen vorhanden.</p>';
+}
+</script></main>
+<footer>
+  <p>&copy; 2025 Fermentistry – Mit Liebe in Franken gebraut</p>
+</footer>
+</body>
+</html>

@@ -1,1 +1,1 @@
-console.log('Fermentistry Webshop aktiv');
+let warenkorb=[];function submitBestellung(){let d=document.getElementById('warenkorbDaten');if(d){d.value=JSON.stringify(warenkorb);}let data={name:'Test',email:'test@example.com',warenkorb:JSON.stringify(warenkorb)};let all=JSON.parse(localStorage.getItem('bestellungen')||'[]');all.push(data);localStorage.setItem('bestellungen',JSON.stringify(all));}

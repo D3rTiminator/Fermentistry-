@@ -1,1 +1,37 @@
-<!DOCTYPE html><html lang='de'><head><meta charset='UTF-8'><title>Bestellen</title><link rel='stylesheet' href='styles.css'><script src='shop.js' defer></script></head><body><main><h2>Checkout</h2><form method='POST' action='https://formspree.io/f/YOUR_FORM_ID'><input name='name'><input name='email'><textarea name='adresse'></textarea><input type='hidden' id='warenkorbDaten'><button type='submit' onclick='submitBestellung()'>Absenden</button></form><br><form action='https://www.paypal.com/cgi-bin/webscr' method='post' target='_blank'><input type='hidden' name='cmd' value='_s-xclick'><input type='hidden' name='hosted_button_id' value='YOUR_PAYPAL_BUTTON_ID'><input type='submit' value='Mit PayPal bezahlen'></form></main></body></html>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fermentistry</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>Fermentistry</h1>
+  <p>Edler Kombucha aus Franken – natürlich fermentiert</p>
+</header>
+<nav>
+  <a href="index.html">Start</a>
+  <a href="produkte.html">Produkte</a>
+  <a href="bestellen.html">Bestellen</a>
+  <a href="abo.html">Abo</a>
+  <a href="kontakt.html">Kontakt</a>
+</nav>
+<main>
+<section class="hero">
+  <h2>Bestellen</h2>
+  <p>Fülle das Formular aus und wähle deine Zahlungsmethode</p>
+</section>
+<form class="kontakt-formular" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+  <input type="text" name="name" placeholder="Name" required>
+  <input type="email" name="email" placeholder="E-Mail" required>
+  <textarea name="adresse" placeholder="Lieferadresse" required></textarea>
+  <input type="hidden" id="warenkorbDaten" name="warenkorb">
+  <button type="submit">Bestellung absenden</button>
+</form></main>
+<footer>
+  <p>&copy; 2025 Fermentistry – Mit Liebe in Franken gebraut</p>
+</footer>
+</body>
+</html>
